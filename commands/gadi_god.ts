@@ -12,7 +12,12 @@ export default {
         const embed = new MessageEmbed()
         .setTitle("gadi_god")
         .setDescription("summon gadi")
-        .setImage("https://i.imgur.com/XQQQQQQ.png")
+        // .attachFile('./avatar.png')
+        // .setImage('attachment://avatar.png');
+      
+        .setImage("file:///C:/Users/leon9/OneDrive/Desktop/pics/ice%20man.jpg")
         return embed;
+        // message.reply('pong')
     }
 } as ICommand
+
