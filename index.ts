@@ -14,19 +14,11 @@ const client = new DiscordJS.Client({
 
 client.on('ready', () => {
     console.log('Bot is ready!')
-
+    client.user?.setActivity('!help to see possible commands');
     new WOKcommands(client, {
         commandDir: path.join(__dirname, 'commands'),
         typeScript: true
     })
 })
-
-// client.on('messageCreate', (message) => {
-//     if (message.content === 'ping') {
-//         message.reply({
-//             content: 'pong'
-//         })
-//     }
-// })
 
 client.login(process.env.TOKEN)
