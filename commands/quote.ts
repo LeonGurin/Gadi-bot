@@ -1,5 +1,3 @@
-// import { MessageEmbed } from "discord.js";
-import { Client } from "discord.js";
 import { ICommand } from "wokcommands";
 
 var quotes: string[] = [
@@ -20,7 +18,7 @@ export default {
     permissions: [],
 
     callback: ({ message }) => {
-        message.reply(quotes[Math.floor(Math.random()*quotes.length)]);        
+        message.reply("*" + quotes[Math.floor(Math.random()*quotes.length)] + "*");        
     }
 } as ICommand
 

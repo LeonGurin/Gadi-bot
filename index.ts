@@ -21,4 +21,12 @@ client.on('ready', () => {
     })
 })
 
+client.on('messageCreate', message => {
+    if(message.content === '~shutdown' && message.author.id === process.env.OWNER_ID) {
+        message.channel.send("Shutting down...").then(() => {
+            client.destroy();
+        })
+    }
+})
+
 client.login(process.env.TOKEN)

@@ -1,5 +1,3 @@
-// import { MessageEmbed } from "discord.js";
-import { Client } from "discord.js";
 import { ICommand } from "wokcommands";
 
 export default {
@@ -10,7 +8,7 @@ export default {
     permissions: [],
 
     callback: ({ message }) => {
-        message.reply(' אתה תקבל ' + Math.floor(Math.random()*100) + ' במבחן ');        
+        message.reply(' אתה תקבל ' + Math.floor(Math.random()*100) + ' במבחן הקרוב... ');        
     }
 } as ICommand
 
