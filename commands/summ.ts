@@ -14,6 +14,8 @@ var ilanArr: string[] = [
 
 var random: string;
 
+const lecturerArr: string[] = ["gadi", "ilan"];
+
 export default {
     category: 'Summon',
     name: "summ",
@@ -22,42 +24,29 @@ export default {
     permissions: [],
 
     callback: ({ message }) => {
+
+        // split the message into words
+        let words = message.content.split(' ');
+
         let embed = new MessageEmbed()
-        switch(message.content){
-            case '!summ gadi':
+        switch(words[1]){
+            case lecturerArr[0]:
                 random = gadiArr[Math.floor(Math.random() * gadiArr.length)]
                 // const embed = new MessageEmbed()
                 embed.setTitle("GADI")
                 .setDescription("summoned Gadi")        
                 .setImage(random)
                 return embed;
-            case '!summ ilan':
+            case 'ilan':
                 random = ilanArr[Math.floor(Math.random() * ilanArr.length)]
                 // const embed = new MessageEmbed()
                 embed.setTitle("ILAN")
                 .setDescription("summoned Ilan")
                 .setImage(random)
                 return embed;
-            case '!summ':
-                break;
-        }
-        // if(message.content === "!summ gadi"){
-        //     random = gadiArr[Math.floor(Math.random() * gadiArr.length)]
-        //     const embed = new MessageEmbed()
-        //     embed.setTitle("GADI")
-        //     .setDescription("summoned Gadi")        
-        //     .setImage(random)
-        //     return embed;
-        // }
-        // else if(message.content === '!summ ilan'){
-        //     random = ilanArr[Math.floor(Math.random() * ilanArr.length)]
-        //     const embed = new MessageEmbed()
-        //     embed.setTitle("ILAN")
-        //     .setDescription("summoned Ilan")
-        //     .setImage(random)
-        //     return embed;
-        // }
-        
+            default:
+                message.reply("Please specify a lecturer.\nType the command: '!summ' + space + lecturer name.\nThe currently available lecturers are: \n*" + lecturerArr.join(', ') + "*");
+        }        
     }
 } as ICommand
 

@@ -18,7 +18,14 @@ export default {
     permissions: [],
 
     callback: ({ message }) => {
-        message.reply("*" + quotes[Math.floor(Math.random()*quotes.length)] + "*");        
+        let words = message.content.split(' ');
+        switch (words[1]) {
+            case '-all':
+                message.channel.send("The currently available quotes are: \n\n*" + quotes.join(',\n') + "*\n\nDM me if you have a quote you want to add!");
+                break;
+            default:
+                message.reply("*" + quotes[Math.floor(Math.random()*quotes.length)] + "*");
+        }       
     }
 } as ICommand
 

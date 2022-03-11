@@ -5,6 +5,8 @@ import path from 'path'
 
 dotenv.config()
 
+//https://discord.com/oauth2/authorize?client_id=949943010106421298&scope=bot
+
 const client = new DiscordJS.Client({
     intents: [
         Intents.FLAGS.GUILDS,
@@ -14,19 +16,19 @@ const client = new DiscordJS.Client({
 
 client.on('ready', () => {
     console.log('Bot is ready!')
-    client.user?.setActivity('!help to see possible commands');
+    client.user?.setActivity('!helpme to see possible commands');
     new WOKcommands(client, {
         commandDir: path.join(__dirname, 'commands'),
         typeScript: true
     })
 })
 
-client.on('messageCreate', message => {
-    if(message.content === '~shutdown' && message.author.id === process.env.OWNER_ID) {
-        message.channel.send("Shutting down...").then(() => {
-            client.destroy();
-        })
-    }
-})
+// client.on('messageCreate', message => {
+//     if(message.content === '~shutdown' && message.author.id === process.env.OWNER_ID) {
+//         message.channel.send("Shutting down...").then(() => {
+//             client.destroy();
+//         })
+//     }
+// })
 
 client.login(process.env.TOKEN)
