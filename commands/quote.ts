@@ -24,7 +24,7 @@ export default {
             message.reply("The currently available quotes are: \n\n*" + quotes.join(',\n') + "*\n\nDM me if you have a quote you want to add!");
         }
         else if(words[1] != undefined){
-            message.reply("*" + quotes[parseInt(words[1])+1] + "*");
+            message.reply("*" + quotes[parseInt(words[1])-1] + "*");
         }
         else{
             message.reply("*" + quotes[Math.floor(Math.random() * quotes.length)] + "*");
