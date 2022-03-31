@@ -8,7 +8,7 @@ var quotes: string[] = [
     '5) עוף ברוטב מרינדת תפוזים',
     '6) אחד זייף',
     '7) לא אומרים לא על C אומרים Yes daddy more',
-    
+    "8) Yeah, I'm a nerd, it's thursday evening and were talking about irregular languages, bro",
 ];
 
 export default {
