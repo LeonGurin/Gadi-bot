@@ -9,6 +9,7 @@ var quotes: string[] = [
     '6) אחד זייף',
     '7) לא אומרים לא על C אומרים Yes daddy more',
     "8) Yeah, I'm a nerd, it's thursday evening and were talking about irregular languages, bro",
+    '9) אם דרסת חתול, אתה לא תוכל לדעת אם דרסת אותו אם תסתכל מלמעלה, אתה צריך לזוז צעד אחד קדימה ואז להסתכל'
 ];
 
 export default {
