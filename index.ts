@@ -4,7 +4,7 @@ import WOKcommands from 'wokcommands'
 import path from 'path'
 
 dotenv.config()
-//
+
 //https://discord.com/oauth2/authorize?client_id=949943010106421298&scope=bot
 
 const client = new DiscordJS.Client({
