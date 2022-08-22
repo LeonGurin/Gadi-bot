@@ -30,9 +30,15 @@ var daniArr: string[] = [
     'https://www.cs.haifa.ac.il/~dkeren/danny.jpg',
 ];
 
+var yuriArr: string[] = [
+    'http://cs.haifa.ac.il/~yuri/image002.png',
+    'https://cs.hevra.haifa.ac.il/images/staff/Academic/Yuri1.jpg',
+    'https://isyoga.co.il/wp-content/uploads/2021/10/%D7%AA%D7%A2%D7%95%D7%93%D7%AA-%D7%9E%D7%95%D7%A8%D7%94-%D7%9C%D7%99%D7%95%D7%92%D7%94-%D7%99%D7%95%D7%A8%D7%99-%D7%A8%D7%91%D7%99%D7%A0%D7%95%D7%91%D7%99%D7%A5-1.jpg',
+];
+
 var random: string;
 
-const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani"];
+const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri"];
 
 export default {
     category: 'Summon',
@@ -90,7 +96,14 @@ export default {
                 .setDescription("summoned Dani")
                 .setImage(random)
                 return embed;
-
+            case 'yuri':
+                random = yuriArr[Math.floor(Math.random() * yuriArr.length)]
+                // const embed = new MessageEmbed()
+                embed.setTitle("YURI")
+                .setDescription("summoned Yuri")
+                .setImage(random)
+                return embed;
+                
             default:
                 message.reply("Please specify a lecturer.\nType the command: '!summ' + space + lecturer name.\nThe currently available lecturers are: \n*" + lecturerArr.join(', ') + "*");
         }        
