@@ -46,7 +46,7 @@ var kerenArr: string[] = [
 
 var random: string;
 
-const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri"];
+const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri","keren"];
 
 export default {
     category: 'Summon',
