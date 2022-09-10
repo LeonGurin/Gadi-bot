@@ -18,13 +18,14 @@ export default {
         let choice;
         // invalid input
         if ((choice = options.indexOf(words[1])) < 0) {
-            embed.setTitle("Idiot")
+            embed.setTitle("IDIOT")
             .setDescription("Invalid choice, dumbass")
             return embed
         }
         // print choices
-        description += "**I Chose**: " + options[random] + "\n"
-        description += "**You Chose**: " + words[1] + "\n"
+        description += "**I Chose:** " + options[random] + "\n"
+        description += "**You Chose:** " + words[1] + "\n"
+        description += "**Result:** "
         // draw
         if (choice == random) {
             title = "DRAW"
