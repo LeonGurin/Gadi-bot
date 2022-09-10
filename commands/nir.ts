@@ -20,6 +20,8 @@ export default {
                     .setDescription("SURPSISE!! THIS IS KEREN!")        
                     .setImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUjp4V_AGKqNYfbr66SWdUfSuNgftRiHuONkc98Ori5fpDgu-LZ01geyFupWwFJvUH4JQ&usqp=CAU')
                 return embed;
+            }else if(words[1] == undefined){
+                const msg = await message.reply("Enter the secret password to see the surprise! (!nir <password>)");
             }else{
                 const msg = await message.reply("That's not the password!");
             }
