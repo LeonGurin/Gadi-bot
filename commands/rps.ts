@@ -22,8 +22,8 @@ export default {
         // help option
         if (help) {
             title = "HELP"
-            description = "Input: rock/paper/scissors. Other inputs are invalid.\n" +
-                          "Options:\n" +
+            description = "**Input:** rock/paper/scissors. Other inputs are invalid.\n" +
+                          "**Options:**\n" +
                           "`-r`: rigged - you always win.\n"
             embed.setTitle(title)
             embed.setDescription(description)
