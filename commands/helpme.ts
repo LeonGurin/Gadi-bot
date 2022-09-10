@@ -19,6 +19,8 @@ export default {
             .addField('Command Name: __!score__','Get a random score for your next exam! (factually correct)\n\n\n')
             .addField('Command Name: __!helpme__','You already typed it, tell your friends\n\n\n')
             .addField('Command Name: __!sus__','sussy baka\n\n\n')
+            .addField('Command Name: __!nir__','Surprise for Nir\n\n\n')
+            .addField('Command Name: __!rps__','Play rock paper scissors against Gadi-Bot\n\n\n')
             .setTimestamp()
         message.reply(
             {embeds: [embed]}
