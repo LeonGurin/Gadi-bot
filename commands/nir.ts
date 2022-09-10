@@ -19,7 +19,11 @@ export default {
                     .setDescription("SURPSISE!! THIS IS KEREN!")        
                     .setImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUjp4V_AGKqNYfbr66SWdUfSuNgftRiHuONkc98Ori5fpDgu-LZ01geyFupWwFJvUH4JQ&usqp=CAU')
                 return embed;
+            }else{
+                
             }
+        }else{
+            const msg = await message.reply('YOU ARE NOT NIR!!!!');
         }
         
     }
