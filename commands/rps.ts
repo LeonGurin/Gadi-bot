@@ -12,19 +12,32 @@ export default {
         let embed = new MessageEmbed()
         let title = ""
         let description = ""
-        let options = ["rock", "paper", "scissors"]
+        let choices = ["rock", "paper", "scissors"]
         let random = Math.floor(Math.random() * 3)
         let words = message.content.split(' ')
+        // options
+        let help = (words[1] == "-h")
         let rigged = (words[1] == "-r")
+        let god = (words[1] == "-g")
+        // help option
+        if (help) {
+            title = "HELP"
+            description = "Input: rock/paper/scissors. Other inputs are invalid.\n" +
+                          "Options:\n"
+                          "`-r`: rigged - you always win.\n"
+            embed.setTitle(title)
+            embed.setDescription(description)
+            return embed
+        }
         // invalid input
         let choice;
-        if ((choice = options.indexOf(words[words.length - 1])) < 0) {
+        if ((choice = choices.indexOf(words[words.length - 1])) < 0) {
             embed.setTitle("IDIOT")
             .setDescription("Invalid choice, dumbass")
             return embed
         }
         // print choices
-        description += "**I Chose:** " + options[random] + "\n"
+        description += "**I Chose:** " + choices[random] + "\n"
         description += "**You Chose:** " + words[words.length - 1] + "\n"
         description += "**Result:** "
         // you won
