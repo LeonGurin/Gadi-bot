@@ -15,31 +15,32 @@ export default {
         let options = ["rock", "paper", "scissors"]
         let random = Math.floor(Math.random() * 3)
         let words = message.content.split(' ')
-        let choice;
+        let rigged = (words[1] == "-r")
         // invalid input
-        if ((choice = options.indexOf(words[1])) < 0) {
+        let choice;
+        if ((choice = options.indexOf(words[words.length - 1])) < 0) {
             embed.setTitle("IDIOT")
             .setDescription("Invalid choice, dumbass")
             return embed
         }
         // print choices
         description += "**I Chose:** " + options[random] + "\n"
-        description += "**You Chose:** " + words[1] + "\n"
+        description += "**You Chose:** " + words[words.length - 1] + "\n"
         description += "**Result:** "
+        // you won
+        if ((choice == 1 && random == 0) || (choice == 2 && random == 1) || (choice == 0 && random == 2) || rigged) {
+            title = "VICTORY"
+            description += "You win... but you probably cheated"
+        }
         // draw
-        if (choice == random) {
+        else if (choice == random) {
             title = "DRAW"
             description += "Draw, you sussy baka"
         }
-        // you lost 
-        else if ((choice == 0 && random == 1) || (choice == 1 && random == 2) || (choice == 2 && random == 0)) {
+        // you lost
+        else {
             title = "DEFEAT"
             description += "You lost! Muhahaha (Failed Data Structures)"
-        }
-        // you won
-        else {
-            title = "VICTORY"
-            description += "You win... but you probably cheated"
         }
         // set attributes of embed
         embed.setTitle(title)
