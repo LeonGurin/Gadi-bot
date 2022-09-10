@@ -14,6 +14,7 @@ export default {
         let choice;
         if ((choice = options.indexOf(words[1])) < 0) {
             message.reply("Invalid choice, dumbass")
+            return
         }
         // print choices
         message.reply("**I Chose**: " + options[random])
