@@ -1,5 +1,5 @@
 import { MessageEmbed } from "discord.js";
-import { ICallbackObject, ICommand } from "wokcommands";
+import { ICommand } from "wokcommands";
 
 export default {
   category: "DAT",
