@@ -54,7 +54,7 @@ export default {
           "." +
           date.getFullYear().toString()
       );
-      msg.react("📅");
+      msg.react("calendar");
     }
     // print time
     if (print_time) {
@@ -66,7 +66,7 @@ export default {
           ":" +
           date.getSeconds().toString()
       );
-      msg.react("⌚");
+      msg.react("clock");
     }
   },
 } as ICommand;
