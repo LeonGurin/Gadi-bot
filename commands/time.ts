@@ -9,6 +9,6 @@ export default {
 
   callback: ({ message }) => {
     let date = new Date();
-    message.reply(date.getTime().toString());
+    message.reply(date.getDate().toString());
   },
 } as ICommand;
