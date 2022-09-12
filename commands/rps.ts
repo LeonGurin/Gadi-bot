@@ -19,13 +19,13 @@ export default {
     let title = "";
     let description = "";
     let choices = ["rock", "paper", "scissors"];
-    let emojis = [":rock:", ":paper:", ":scissors:"];
+    let emojis = [":rock:", ":roll_of_paper:", ":scissors:"];
     let user_choice;
     let bot_choice = Math.floor(Math.random() * 3);
     let words = message.content.split(" ");
     let rigged = false;
     // help option
-    if ("-h" in words) {
+    if (words.indexOf("-h")) {
       title = "HELP";
       description =
         "```rps [OPTION]... [INPUT]...```\n" +
@@ -37,11 +37,11 @@ export default {
       return createEmbed(title, description);
     }
     // rigged option
-    if ("-r" in words) {
+    if (words.indexOf("-r") > 0) {
       rigged = true;
     }
     // god option
-    if ("-g" in words) {
+    if (words.indexOf("-g") > 0) {
       choices.push("god");
     }
     // check user input
@@ -52,9 +52,13 @@ export default {
     }
     // print user and bot choices
     description +=
-      "**I Chose:** " + choices[bot_choice] + emojis[bot_choice] + "\n";
+      "**I Chose:** " + choices[bot_choice] + " " + emojis[bot_choice] + "\n";
     description +=
-      "**You Chose:** " + choices[user_choice] + emojis[user_choice] + "\n";
+      "**You Chose:** " +
+      choices[user_choice] +
+      " " +
+      emojis[user_choice] +
+      "\n";
     description += "**Result:** ";
     // user wins scenario
     if (
