@@ -51,8 +51,10 @@ export default {
       return createEmbed(title, description);
     }
     // print user and bot choices
-    description += "**I Chose:** " + choices[bot_choice] + "\n";
-    description += "**You Chose:** " + words[words.length - 1] + "\n";
+    description +=
+      "**I Chose:** " + choices[bot_choice] + emojis[bot_choice] + "\n";
+    description +=
+      "**You Chose:** " + choices[user_choice] + emojis[user_choice] + "\n";
     description += "**Result:** ";
     // user wins scenario
     if (
