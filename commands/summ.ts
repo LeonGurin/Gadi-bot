@@ -41,12 +41,25 @@ var kerenArr: string[] = [
     'https://www.rotaryhaifa.org.il/uploaded_files/62834bd2313e7232361fabe94f62b309.JPG',
     'https://www.goshow.co.il/application/views/website/timthumb.php?w=960&h=344&zc=1&q=80&src=https%3A%2F%2Fwww.goshow.co.il%2Fmanager%2Fuserfiles%2F2017%2F03%2F%D7%A7%D7%A8%D7%9F-%D7%90%D7%95%D7%A8-%D7%97%D7%9F-%D7%96%D7%95%D7%92%D7%99%D7%95%D7%AA-%D7%91%D7%90%D7%A0%D7%A8.jpg',
     'https://mydnamatch.me/wp-content/uploads/2021/09/productKeren.jpg',
+];
 
-]
+var idanArr: string[] = [
+    "https://scontent.fhfa1-1.fna.fbcdn.net/v/t1.6435-9/66467443_2305810606353181_3409058956088180736_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=04eh1HwWFK4AX_LtnCF&_nc_ht=scontent.fhfa1-1.fna&oh=00_AT8ueAk-5JJl6zfdTFbf_-S8MdyG3hwrC6ZcngzYekQYKA&oe=63448ACC",
+    "https://media-exp1.licdn.com/dms/image/C5603AQEfRKey9Kguzg/profile-displayphoto-shrink_800_800/0/1539436996863?e=1668643200&v=beta&t=U0k0IYdss6wfYXSFhfvTrLqfQ0EM7K5HJjzh9TiHp2A"
+];
 
-var random: string;
+function printEmbed(name: string, arr: string[]): MessageEmbed {
+    var embed = new MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle(name)
+        .setDescription("summoned " + name)
+        .setImage(arr[Math.floor(Math.random() * arr.length)]);
+    return embed;
+}
 
-const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri","keren"];
+// var random: string;
+
+const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri","keren","idan","idan"];
 
 export default {
     category: 'Summon',
@@ -62,62 +75,81 @@ export default {
 
         let embed = new MessageEmbed()
         switch(words[1]){
-            case lecturerArr[0]:
-                random = gadiArr[Math.floor(Math.random() * gadiArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("GADI")
-                .setDescription("summoned Gadi")        
-                .setImage(random)
-                return embed;
-            case 'ilan':
-                random = ilanArr[Math.floor(Math.random() * ilanArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("ILAN")
-                .setDescription("summoned Ilan")
-                .setImage(random)
-                return embed;
-            case 'yael':
-                random = yaelArr[Math.floor(Math.random() * yaelArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("YAEL")
-                .setDescription("summoned Yael")
-                .setImage(random)
-                return embed;
-            case 'dan':
-                random = danArr[Math.floor(Math.random() * danArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("DAN")
-                .setDescription("summoned Dan")
-                .setImage(random)
-                return embed;
-            case 'or':
-                random = orArr[Math.floor(Math.random() * orArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("OR")
-                .setDescription("summoned Or")
-                .setImage(random)
-                return embed;
-            case 'dani':
-                random = daniArr[Math.floor(Math.random() * daniArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("DANI")
-                .setDescription("summoned Dani")
-                .setImage(random)
-                return embed;
-            case 'yuri':
-                random = yuriArr[Math.floor(Math.random() * yuriArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("YURI")
-                .setDescription("summoned Yuri")
-                .setImage(random)
-                return embed;
-            case 'keren':
-                random = kerenArr[Math.floor(Math.random() * kerenArr.length)]
-                // const embed = new MessageEmbed()
-                embed.setTitle("KEREN OR CHEN")
-                .setDescription("summoned Keren")
-                .setImage(random)
-                return embed;
+            case "Gadi":
+                return printEmbed("Gadi", gadiArr);
+            case "Ilan":
+                return printEmbed("Ilan", ilanArr);
+            case "Yael":
+                return printEmbed("Yael", yaelArr);
+            case "Dan":
+                return printEmbed("Dan", danArr);
+            case "Or":
+                return printEmbed("Or", orArr);
+            case "Dani":
+                return printEmbed("Dani", daniArr);
+            case "Yuri":
+                return printEmbed("Yuri", yuriArr);
+            case "Keren":
+                return printEmbed("Keren", kerenArr);
+            case "Idan":
+                return printEmbed("Idan", idanArr);
+
+            // case lecturerArr[0]:
+            //     random = gadiArr[Math.floor(Math.random() * gadiArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("GADI")
+            //     .setDescription("summoned Gadi")        
+            //     .setImage(random)
+            //     return embed;
+            // case 'ilan':
+            //     random = ilanArr[Math.floor(Math.random() * ilanArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("ILAN")
+            //     .setDescription("summoned Ilan")
+            //     .setImage(random)
+            //     return embed;
+            // case 'yael':
+            //     random = yaelArr[Math.floor(Math.random() * yaelArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("YAEL")
+            //     .setDescription("summoned Yael")
+            //     .setImage(random)
+            //     return embed;
+            // case 'dan':
+            //     random = danArr[Math.floor(Math.random() * danArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("DAN")
+            //     .setDescription("summoned Dan")
+            //     .setImage(random)
+            //     return embed;
+            // case 'or':
+            //     random = orArr[Math.floor(Math.random() * orArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("OR")
+            //     .setDescription("summoned Or")
+            //     .setImage(random)
+            //     return embed;
+            // case 'dani':
+            //     random = daniArr[Math.floor(Math.random() * daniArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("DANI")
+            //     .setDescription("summoned Dani")
+            //     .setImage(random)
+            //     return embed;
+            // case 'yuri':
+            //     random = yuriArr[Math.floor(Math.random() * yuriArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("YURI")
+            //     .setDescription("summoned Yuri")
+            //     .setImage(random)
+            //     return embed;
+            // case 'keren':
+            //     random = kerenArr[Math.floor(Math.random() * kerenArr.length)]
+            //     // const embed = new MessageEmbed()
+            //     embed.setTitle("KEREN OR CHEN")
+            //     .setDescription("summoned Keren")
+            //     .setImage(random)
+            //     return embed;
                 
             default:
                 message.reply("Please specify a lecturer.\nType the command: '!summ' + space + lecturer name.\nThe currently available lecturers are: \n*" + lecturerArr.join(', ') + "*");
