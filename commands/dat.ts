@@ -8,7 +8,7 @@ export default {
 
   permissions: [],
 
-  callback: ({ message }) => {
+  callback: async ({ message }) => {
     let date = new Date();
     let days = [
       "Sunday",
@@ -44,7 +44,7 @@ export default {
     }
     // print date
     if (print_date) {
-      message.reply(
+      const msg = await message.reply(
         "**Date:** " +
           days[date.getDay()] +
           ", " +
@@ -54,11 +54,11 @@ export default {
           "." +
           date.getFullYear().toString()
       );
-      message.react(":calender:");
+      msg.react(":calender:");
     }
     // print time
     if (print_time) {
-      message.reply(
+      const msg = await message.reply(
         "**Time:** " +
           date.getHours().toString() +
           ":" +
@@ -66,7 +66,7 @@ export default {
           ":" +
           date.getSeconds().toString()
       );
-      message.react("clock");
+      msg.react(":clock:");
     }
   },
 } as ICommand;
