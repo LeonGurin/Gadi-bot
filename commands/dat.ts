@@ -54,7 +54,7 @@ export default {
           "." +
           date.getFullYear().toString()
       );
-      message.react("calender");
+      message.react(":calender:");
     }
     // print time
     if (print_time) {
