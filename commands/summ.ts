@@ -59,7 +59,7 @@ function printEmbed(name: string, arr: string[]): MessageEmbed {
 
 // var random: string;
 
-const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri","keren","idan","idan"];
+const lecturerArr: string[] = ["gadi", "ilan","yael","dan","or","dani","yuri","keren","idan"];
 
 export default {
     category: 'Summon',
