@@ -28,7 +28,7 @@ export default {
       description =
         "```!rps [OPTION]... [INPUT]...```\n" +
         "**INPUT:** rock/paper/scissors.\n" +
-        "     other inputs are invalid.\n" +
+        "other inputs are invalid.\n" +
         "**OPTIONS:**\n" +
         "`-r`: rigged, you always win (cheater)\n" +
         "`-g`: god, enables god choice (god beats everything except itself)\n" +
