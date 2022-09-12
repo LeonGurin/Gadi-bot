@@ -25,7 +25,7 @@ export default {
     let words = message.content.split(" ");
     let rigged = false;
     // help option
-    if (words.indexOf("-h")) {
+    if (words.indexOf("-h") > 0) {
       title = "HELP";
       description =
         "```rps [OPTION]... [INPUT]...```\n" +
