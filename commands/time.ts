@@ -12,7 +12,7 @@ export default {
     let date = new Date();
     let words = message.content.split(" ");
     let print_date = true;
-    let print_time = false;
+    let print_time = true;
     // help option
     if (words.indexOf("-h") > 0) {
       let embed = new MessageEmbed();
@@ -37,7 +37,7 @@ export default {
     if (print_date) {
       message.reply(
         "Date: " +
-          date.getDay.toString() +
+          date.getDay().toString() +
           " " +
           date.getDate().toString() +
           " " +
