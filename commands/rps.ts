@@ -21,7 +21,6 @@ export default {
     let choices = ["rock", "paper", "scissors"];
     let emojis = [":rock:", ":roll_of_paper:", ":scissors:"];
     let words = message.content.split(" ");
-    let rigged = false;
     // help option
     if (words.indexOf("-h") > 0) {
       title = "HELP";
@@ -35,6 +34,7 @@ export default {
       return createEmbed(title, description);
     }
     // rigged option
+    let rigged = false;
     if (words.indexOf("-r") > 0) {
       rigged = true;
     }
