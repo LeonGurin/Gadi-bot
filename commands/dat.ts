@@ -47,7 +47,7 @@ export default {
       message.reply(
         "**Date:** " +
           days[date.getDay()] +
-          " " +
+          ", " +
           date.getDate().toString() +
           "." +
           (date.getMonth() + 1).toString() +
