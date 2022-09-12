@@ -26,9 +26,9 @@ export default {
       title = "HELP";
       description =
         "```rps [OPTION]... [INPUT]...```\n" +
-        "**Input:** rock/paper/scissors.\n" +
-        "Other inputs are invalid.\n" +
-        "**Options:**\n" +
+        "**INPUT:** rock/paper/scissors.\n" +
+        "other inputs are invalid.\n" +
+        "**OPTIONS:**\n" +
         "`-r`: rigged, user always wins (cheater).\n" +
         "`-g`: enables god choice (god beats everything except itself).";
       return createEmbed(title, description);
@@ -48,7 +48,7 @@ export default {
     let user_choice;
     if ((user_choice = choices.indexOf(words[words.length - 1])) < 0) {
       title = "IDIOT";
-      description = "Invalid data, dumbass.";
+      description = "Invalid data, dumb ass";
       return createEmbed(title, description);
     }
     // print user and bot choices
