@@ -53,14 +53,14 @@ export default {
     }
     // print user and bot choices
     description +=
-      "**I Chose:** " + choices[bot_choice] + " " + emojis[bot_choice] + "\n";
+      "**I CHOSE:** " + choices[bot_choice] + " " + emojis[bot_choice] + "\n";
     description +=
-      "**You Chose:** " +
+      "**YOU CHOSE:** " +
       choices[user_choice] +
       " " +
       emojis[user_choice] +
       "\n";
-    description += "**Result:** ";
+    description += "**RESULT:** ";
     // user wins scenario
     if (
       (user_choice == 1 && bot_choice == 0) || // paper beats rock
