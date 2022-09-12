@@ -46,7 +46,7 @@ export default {
     if (print_date) {
       message.reply(
         "**Date:** " +
-          days[date.getDay()] +
+          days[date.getDay() - 1] +
           " " +
           date.getDate().toString() +
           " " +
