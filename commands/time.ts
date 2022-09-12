@@ -49,9 +49,9 @@ export default {
           days[date.getDay() - 1] +
           " " +
           date.getDate().toString() +
-          " " +
+          "." +
           date.getMonth().toString() +
-          " " +
+          "." +
           date.getFullYear().toString()
       );
     }
