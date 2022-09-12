@@ -2,14 +2,23 @@ import { MessageEmbed } from "discord.js";
 import { ICallbackObject, ICommand } from "wokcommands";
 
 export default {
-  category: "Time",
-  name: "time",
-  description: "Get time and date.",
+  category: "DAT",
+  name: "dat",
+  description: "Get date and/or time.",
 
   permissions: [],
 
   callback: ({ message }) => {
     let date = new Date();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     let words = message.content.split(" ");
     let print_date = true;
     let print_time = true;
@@ -18,7 +27,7 @@ export default {
       let embed = new MessageEmbed();
       let title = "HELP";
       let description =
-        "```!time [OPTION]...```" +
+        "```!dat [OPTION]...```" +
         "**OPTIONS:**\n" +
         "`-d`: only print date\n" +
         "`-t`: only print time";
@@ -36,20 +45,20 @@ export default {
     // print date
     if (print_date) {
       message.reply(
-        "Date: " +
-          date.getDay().toString() +
-          " " +
+        "**Date:** " +
+          days[date.getDay()] +
+          ", " +
           date.getDate().toString() +
-          " " +
-          date.getMonth().toString() +
-          " " +
+          "." +
+          (date.getMonth() + 1).toString() +
+          "." +
           date.getFullYear().toString()
       );
     }
     // print time
     if (print_time) {
       message.reply(
-        "Time: " +
+        "**Time:** " +
           date.getHours().toString() +
           ":" +
           date.getMinutes().toString() +
