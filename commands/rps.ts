@@ -20,8 +20,6 @@ export default {
     let description = "";
     let choices = ["rock", "paper", "scissors"];
     let emojis = [":rock:", ":roll_of_paper:", ":scissors:"];
-    let user_choice;
-    let bot_choice = Math.floor(Math.random() * 3);
     let words = message.content.split(" ");
     let rigged = false;
     // help option
@@ -45,7 +43,9 @@ export default {
       choices.push("god");
       emojis.push(":angel:");
     }
-    // check user input
+    // receive and check user input
+    let bot_choice = Math.floor(Math.random() * choices.length);
+    let user_choice;
     if ((user_choice = choices.indexOf(words[words.length - 1])) < 0) {
       title = "IDIOT";
       description = "Invalid data, dumbass.";
