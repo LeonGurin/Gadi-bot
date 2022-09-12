@@ -10,6 +10,15 @@ export default {
 
   callback: ({ message }) => {
     let date = new Date();
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
     let words = message.content.split(" ");
     let print_date = true;
     let print_time = true;
@@ -36,8 +45,8 @@ export default {
     // print date
     if (print_date) {
       message.reply(
-        "Date: " +
-          date.getDay().toString() +
+        "**Date:** " +
+          days[date.getDay()] +
           " " +
           date.getDate().toString() +
           " " +
@@ -49,7 +58,7 @@ export default {
     // print time
     if (print_time) {
       message.reply(
-        "Time: " +
+        "**Time:** " +
           date.getHours().toString() +
           ":" +
           date.getMinutes().toString() +
