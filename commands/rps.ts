@@ -22,7 +22,6 @@ export default {
     let emojis = [":rock:", ":roll_of_paper:", ":scissors:"];
     let words = message.content.split(" ");
     let rigged = false;
-    let sus = false;
     // help option
     if (words.indexOf("-h") > 0) {
       title = "HELP";
@@ -33,8 +32,7 @@ export default {
         "**OPTIONS:**\n" +
         "`-r`: rigged, you always win (cheater)\n" +
         "`-g`: god, enables god choice (god beats everything except itself)\n" +
-        "`-e`: extended, adds lizard and spock (nerd mode)\n" +
-        "`-s`: sus, result is randomized (wtf?)";
+        "`-e`: extended, adds lizard and spock (nerd mode)";
       return createEmbed(title, description);
     }
     // rigged option
@@ -52,10 +50,6 @@ export default {
       choices.push("spock");
       emojis.push(":lizard:");
       emojis.push(":vulcan:");
-    }
-    // sus option
-    if (words.indexOf("-s") > 0) {
-      sus = Math.random() < 0.5;
     }
     // randomly generate bot choice
     let bot_choice = choices[Math.floor(Math.random() * choices.length)];
@@ -95,8 +89,7 @@ export default {
       (user_choice == "spock" &&
         (bot_choice == "rock" || bot_choice == "scissors")) || // spock beats rock and scissors
       (user_choice == "god" && bot_choice != "god") || // god beats everything except itself
-      rigged || // if the game is rigged, the user always wins
-      sus // if the game is sus, the result is randomized
+      rigged // if the game is rigged, the user always wins
     ) {
       title = "VICTORY";
       description += "You win... but you probably cheated";
