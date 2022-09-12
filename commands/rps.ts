@@ -43,6 +43,7 @@ export default {
     // god option
     if (words.indexOf("-g") > 0) {
       choices.push("god");
+      emojis.push(":angel:");
     }
     // check user input
     if ((user_choice = choices.indexOf(words[words.length - 1])) < 0) {
