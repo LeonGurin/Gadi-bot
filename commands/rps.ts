@@ -19,6 +19,7 @@ export default {
     let title = "";
     let description = "";
     let choices = ["rock", "paper", "scissors"];
+    let emojis = [":rock:", ":paper:", ":scissors:"];
     let user_choice;
     let bot_choice = Math.floor(Math.random() * 3);
     let words = message.content.split(" ");
