@@ -2,9 +2,9 @@ import { MessageEmbed } from "discord.js";
 import { ICallbackObject, ICommand } from "wokcommands";
 
 export default {
-  category: "Time",
-  name: "time",
-  description: "Get time and date.",
+  category: "D&T",
+  name: "d&t",
+  description: "Get date and/or time.",
 
   permissions: [],
 
