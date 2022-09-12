@@ -1,7 +1,7 @@
 import { MessageEmbed } from "discord.js";
 import { ICommand } from "wokcommands";
 
-let nirID = '410827023859056641';
+let nirID = '680782833094361195';
 
 export default {
     category: 'Nir',
@@ -13,7 +13,6 @@ export default {
     callback: async ({ message }) => {
         if(message.author.id == nirID) {
             let embed = new MessageEmbed()
-            const msg = await message.reply('@Nir#1579 What is the password?');
             let words = message.content.split(' ');
             if(words[1] == "sussy" && words[2] == "baka") {
                 embed.setTitle("KEREN OR CHEN")
