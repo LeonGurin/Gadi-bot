@@ -75,23 +75,23 @@ export default {
 
         let embed = new MessageEmbed()
         switch(words[1]){
-            case "Gadi":
+            case "gadi":
                 return printEmbed("Gadi", gadiArr);
-            case "Ilan":
+            case "ilan":
                 return printEmbed("Ilan", ilanArr);
-            case "Yael":
+            case "yael":
                 return printEmbed("Yael", yaelArr);
-            case "Dan":
+            case "dan":
                 return printEmbed("Dan", danArr);
-            case "Or":
+            case "or":
                 return printEmbed("Or", orArr);
-            case "Dani":
+            case "dani":
                 return printEmbed("Dani", daniArr);
-            case "Yuri":
+            case "yuri":
                 return printEmbed("Yuri", yuriArr);
-            case "Keren":
+            case "keren":
                 return printEmbed("Keren", kerenArr);
-            case "Idan":
+            case "idan":
                 return printEmbed("Idan", idanArr);
 
             // case lecturerArr[0]:
