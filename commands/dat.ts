@@ -22,6 +22,7 @@ export default {
     let words = message.content.split(" ");
     let print_date = true;
     let print_time = true;
+    
     // help option
     if (words.indexOf("-h") > 0) {
       let embed = new MessageEmbed();

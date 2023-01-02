@@ -22,6 +22,7 @@ export default {
     let emojis = [":rock:", ":roll_of_paper:", ":scissors:"];
     let words = message.content.split(" ");
     let rigged = false;
+
     // help option
     if (words.indexOf("-h") > 0) {
       title = "HELP";
@@ -56,9 +57,19 @@ export default {
     // get and check user choice
     let user_choice = words[words.length - 1];
     if (choices.indexOf(user_choice) < 0) {
-      title = "IDIOT";
-      description = "Invalid input, dumb ass";
-      return createEmbed(title, description);
+      title = "HELP";
+      description =
+        "```!rps [OPTION]... [INPUT]...```\n" +
+        "**INPUT:** rock/paper/scissors.\n" +
+        "other inputs are invalid.\n" +
+        "**OPTIONS:**\n" +
+        "`-r`: rigged, you always win (cheater)\n" +
+        "`-g`: god, enables god choice (god beats everything except itself)\n" +
+        "`-e`: extended, adds lizard and spock (nerd mode)";
+        return createEmbed(title, description);
+
+      // title = "IDIOT";
+      // description = "Invalid input, dumb ass";
     }
     // print user choice
     description +=
