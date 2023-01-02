@@ -1,6 +1,6 @@
 # Etgatering Discord BOT - מרצה_בוט
 
-<img src="https://play-lh.googleusercontent.com/uiZnC5tIBpejW942OXct4smbaHmSowdT5tLSi28Oeb2_pMLPCL-VJqdGIH6ZO3A951M=w480-h960-rw" align='right' width=100 height=100 />
+<img src="https://github.com/LeonGurin/Gadi-bot/blob/main/pictures/gadi_bot.png" align='right' width=100 height=100 />
 
 This is a Discord bot made for the 'Etgathering' discord server.
 It has joke commands features some of the biggest stars in the university of haifa from the computer science department.
@@ -36,4 +36,4 @@ Here is a list of the available commands:
 
 Enter this link in your web browser: [https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot](https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot)
 
-![link]()
+![link](https://github.com/LeonGurin/Gadi-bot/blob/main/pictures/link.png)
