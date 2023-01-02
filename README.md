@@ -12,23 +12,21 @@ It has joke commands features some of the biggest stars in the university of hai
 
 ## What does it do?
 
-* *Command Name:* `!summ__` Summon your favorite lecturer! The command gives you a random picture of him/her!
+Here is a list of the available commands:
 
-* *Command Name:* `!quote` Get a random quote!
+* `!summ__` Summon your favorite lecturer! The command gives you a random picture of him/her!
 
-You can also add -all to see all quotes! 
+* `!quote` Get a random quote!  You can also add -all to see all quotes! New feature, you can type a number from *[1-n]* for a specific quote
 
-New feature, you can type a number from *[1-n]* for a specific quote
+* `!score` Get a random score for your next exam! (factually correct)
 
-* *Command Name:* `!score` Get a random score for your next exam! (factually correct)
+* `!helpme` You already typed it, tell
 
-* *Command Name:* `!helpme` You already typed it, tell your friends
+* `!surprise` (:
 
-* *Command Name:* `!surprise` (:
+* `!rps` Play rock paper scissors against Gadi-Bot (use -h for help)
 
-* *Command Name:* `!rps` Play rock paper scissors against Gadi-Bot (use -h for help)
-
-* **Command Name:** `!dat` Get the time of day! (use -h for help)
+* `!dat` Get the time of day! (use -h for help)
 
 
 
