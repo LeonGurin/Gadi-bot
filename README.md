@@ -34,6 +34,28 @@ Here is a list of the available commands:
 
 ## How to add this bot to your discord server?
 
-Enter this link in your web browser: [https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot](https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot)
+Enter this link in your web browser: 
+
+[https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot](https://discord.com/oauth2/authorize?client_id=949943010106421298&permissions=1133584&scope=bot)
 
 ![link](https://github.com/LeonGurin/Gadi-bot/blob/main/pictures/link.png)
+
+and add it to your desired server!
+
+## How do I run the bot locally?
+
+Here are the necessery steps to successfully run the bot on your machine:
+
+1. Pull the repository into your desired directory.
+
+2. Install **Node.js** - `Node.js`
+
+3. Install **TypeScript** - `npm install -g typescript`
+
+4. Install **node-ts** - `npm install -g node-ts`
+
+5. Lastly, in order to run the bot you would need to get the `TOKEN` value and so if you want permission, `DM` me on discord `SpOOky_L#4203`.
+
+# Thank You For Reading!
+
+
