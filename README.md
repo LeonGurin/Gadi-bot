@@ -3,7 +3,7 @@
 <img src="https://github.com/LeonGurin/Gadi-bot/blob/main/pictures/gadi_bot.png" align='right' width=100 height=100 />
 
 This is a Discord bot made for the 'Etgathering' discord server.
-It has joke commands features some of the biggest stars in the university of haifa from the computer science department.
+It has joke commands & features about some of the biggest stars (lecturers) in Haifa University from the computer science department.
 ❤
 
 **Made by:** @LeonGurin and @OmerEsco
