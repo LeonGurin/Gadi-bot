@@ -49,14 +49,18 @@ Here are the necessery steps to successfully run the bot on your machine:
 
 1. Pull the repository into your desired directory.
 
-2. Install **Node.js** - `Node.js`
+2. Install **Node.js** - `Node.js` (_updated_: lower than 18 because the api is outdated)
 
 3. Install **TypeScript** - `npm install -g typescript`
 
 4. Install **node-ts** - `npm install -g node-ts`
 
-5. Lastly, in order to run the bot you would need to get the `TOKEN` value and so if you want permission, `DM` me on discord `SpOOky_L#4203`.
+5. Install the dependencies in the project directory with - `npm install`
+
+6. In order to run the bot you would need to get the `TOKEN` value of the bot itself and so if you want permission, `DM` me on discord `sp00ky_l`.
+
+7. Lastly, to run type - `ts-node ./index.ts`
 
 # Thank You For Reading!
 
-
+*P.S. DiscordJS and WOKcommands in this project have been outdated for a while*
